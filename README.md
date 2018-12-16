@@ -27,10 +27,10 @@ Starter project for Node and React written in Typescript.
 | **public/dist**          | Contains the output from TypeScript build for client (React).                              |
 | **node_modules**         | Contains all your npm dependencies                                                         |
 | **src**                  | Contains your source code for server (Node) that will be compiled to the dist dir          |
-| **src-client**           | Contains your source code for client (React) that will be compiled to the public/dist dir  |
 | **src**/server.ts        | Entry point to your express app                                                            |
 | tsconfig.json            | Config settings for compiling server code written in TypeScript                            |
-| src-client/tsconfig-client.json | Config settings for compiling server code written in TypeScript                     |
+| **src-client**           | Contains your source code for client (React) that will be compiled to the public/dist dir  |
+| **src-client**/tsconfig.json | Config settings for compiling server code written in TypeScript                     |
 | tslint.json              | Config settings for TSLint code style checking                                             |
 
 ## VS Code Debug Configuration
