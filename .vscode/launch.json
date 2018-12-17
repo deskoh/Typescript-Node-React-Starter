@@ -11,7 +11,7 @@
       "program": "${workspaceFolder}\\dist\\server.js",
     },
     {
-      "name": "Debug TS",
+      "name": "Debug Server",
       "type": "node",
       "request": "launch",
       "cwd": "${workspaceFolder}",
@@ -23,7 +23,7 @@
       "port": 9229
     },
     {
-      "name": "Debug TS (Watch)",
+      "name": "Debug Server (Watch)",
       "type": "node",
       "request": "launch",
       "cwd": "${workspaceFolder}",
@@ -31,6 +31,33 @@
       "runtimeArgs": [
         "run-script",
         "debug:watch"
+      ],
+      "restart": true,
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229
+    },
+    {
+      "name": "Debug All",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run-script",
+        "debug-all"
+      ],
+      "port": 9229
+    },
+    {
+      "name": "Debug All (Watch)",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run-script",
+        "debug-all:watch"
       ],
       "restart": true,
       "console": "integratedTerminal",
