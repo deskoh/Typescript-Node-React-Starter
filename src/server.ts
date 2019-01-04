@@ -12,8 +12,8 @@ app.use(session({
   saveUninitialized: true
 }));
 
-app.get('/test', (req, res) => {
-  res.send('hello world');
+app.get('/api', (req, res) => {
+  res.send('api test');
 });
 
 const port = process.env.PORT || 3000;
