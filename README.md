@@ -1,5 +1,8 @@
 # Typescript Node React Starter
 
+![dependencies](https://david-dm.org/deskoh/Typescript-Node-React-Starter/status.svg)
+![dev dependencies](https://david-dm.org/deskoh/Typescript-Node-React-Starter/dev-status.svg)
+
 Starter project for Node and React written in Typescript.
 
 ## Install Dependencies
