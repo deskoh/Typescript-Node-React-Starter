@@ -1,7 +1,14 @@
 # Typescript Node React Starter
 
-![dependencies](https://david-dm.org/deskoh/Typescript-Node-React-Starter/status.svg)
-![dev dependencies](https://david-dm.org/deskoh/Typescript-Node-React-Starter/dev-status.svg)
+Server:
+
+![dependencies Status](https://img.shields.io/david/deskoh/Typescript-Node-React-Starter.svg?style=flat)
+![devDependencies Status](https://img.shields.io/david/dev/deskoh/Typescript-Node-React-Starter.svg?style=flat)
+
+Client:
+
+![dependencies Status](https://img.shields.io/david/deskoh/Typescript-Node-React-Starter.svg?path=src-client&style=flat)
+![devDependencies Status](https://img.shields.io/david/dev/deskoh/Typescript-Node-React-Starter.svg?path=src-client&style=flat)
 
 Starter project for Node and React written in Typescript.
 
