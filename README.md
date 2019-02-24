@@ -45,44 +45,33 @@ Starter project for Node and React written in Typescript.
 
 ## VS Code Debug Configuration
 
-### Debug Server
+### Launch Server
 
 For debugging server / backend Typescript source in `src` folder. No JavaScript files will be transpiled to disk.
-If debugger cannot be attached fast enough for entry file, modify `--inspect` flag to `--inspect-brk` in `debug` script in `package.json`.
 
-### Debug Server (Watch)
+### Launch Server (Watch)
 
-Same as `Debug Server` configuration but in watch mode. Server will restart and VS code will re-attach when source has changed.
-No JavaScript files will be transpiled to disk.
-If debugger cannot be attached fast enough for entry file, modify `--inspect` flag to `--inspect-brk` in `debug:watch` script in `package.json`.
+Same as `Launch Server` configuration but in watch mode. Server will restart and VS code will re-attach when source has changed.
 
-For backend code, `nodemon` is used to restart server when backend source has changed.
-The `restart` flag in `launch.json` will relaunch debug session automatically when source has changed.
-> Note: Pressing the Stop button stops the debug session and disconnects from Node.js, but nodemon (and Node.js) will continue to run. To stop nodemon, you will have to kill it from the command line (which is easily possible due to the `integratedTerminal` in `launch.json`).
+> Note: In launch configuration `"program": "${workspaceFolder}/node_modules/nodemon/bin/nodemon"` can be replaced by `runtimeExecutable": "nodemon"`, however the `nodemon` process will not be terminated when debugging is stopped.
 
-### Debug All
+### Launch Browser
 
-Same as `Debug Server` configuration and with frontend / client served using `webpack-dev-server`. This will cause browser to automatically refresh when source in `src-client` changes.
+Debug source files in `src-client` in Google Chrome browser. `webpack dev server` has to be started first (using `npm run dev:client`).
 
-### Debug All (Watch)
+### Launch All
 
-Same as `Debug All` configuration but in watch mode. Server will restart and VS code will re-attach when source has changed.
-If debugger cannot be attached fast enough for entry file, modify `--inspect` flag to `--inspect-brk` in `debug:watch` script in `package.json`.
-
-> Note: Pressing the Stop button stops the debug session and disconnects from Node.js, but nodemon (and Node.js) will continue to run. To stop nodemon, you will have to kill it from the command line (which is easily possible due to the `integratedTerminal` in `launch.json`).
+Starts debug configuration `Launch Server` and `Launch Browser`.
 
 ## NPM Scripts
 
-| Npm Script | Description |
-| ------------------- | ------------------------------------------------------------------------------------------------- |
-| `start`             | Runs node on `dist/server.js` which is the apps entry point at localhost:3000                     |
-| `dev`               | Runs backend server in watch mode at localhost:3000. TS files are transpiled in-memory            |
-| `dev-all`           | Runs project (backend at localhost:3000 and frontend at localhost:8080]) in watch mode. TS files are transpiled in-memory |
-| `build`             | Runs build tasks for backend                                                                      |
-| `build-all`         | Full build. Runs ALL build tasks for backend and frontend                                         |
-| `lint`              | Lint backend TS files                                                                             |
-| `lint-all`          | Lint frontend and backend TS files                                                                |
-| `debug`             | Runs backend server at localhost:3000 with the --inspect flag so that debugger can be attached    |
-| `debug-all`         | The same as `debug` but with frontend running at localhost:8080                                   |
-| `debug:watch`       | The same as `debug` but in watch mode.                                                            |
-| `debug-all:watch`   | The same as `debug-all` but in watch mode.                                                        |
+| Npm Script          | Description                                                                             |
+| ------------------- | --------------------------------------------------------------------------------------- |
+| `start`             | Runs node on `dist/server.js` which is the app entry point at localhost:3000            |
+| `dev`               | Runs backend server in watch mode at localhost:3000.                                    |
+| `build`             | Runs build tasks for backend                                                            |
+| `lint`              | Lint backend TS files                                                                   |
+| `dev:client`        | Runs frontend server in watch mode at localhost:8080.                                   |
+| `dev-all`           | Runs project (backend at localhost:3000 and frontend at localhost:8080]) in watch mode. |
+| `build-all`         | Full build. Runs ALL build tasks for backend and frontend                               |
+| `lint-all`          | Lint frontend and backend TS files                                                      |

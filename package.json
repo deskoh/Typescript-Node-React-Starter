@@ -7,14 +7,10 @@
     "dev": "nodemon --watch src --exec ts-node src/server.ts",
     "build": "tsc",
     "lint": "tslint -c tslint.json -p tsconfig.json",
-    "debug": "node --inspect --require ts-node/register --require tsconfig-paths/register src/server.ts",
-    "debug:watch": "nodemon --watch src --exec node --inspect --require ts-node/register --require tsconfig-paths/register src/server.ts",
+    "dev:client": "npm run dev --prefix=src-client",
     "dev-all": "concurrently \"npm run dev\" \"npm run dev --prefix src-client\"",
     "build-all": "npm run build && npm run build --prefix src-client",
-    "lint-all": "tslint -c tslint.json -p tsconfig.json && npm run lint --prefix src-client",
-    "debug-all": "concurrently \"npm run debug\" \"npm run dev --prefix src-client\"",
-    "debug-all:watch": "concurrently \"npm run debug:watch\" \"npm run dev --prefix src-client\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint-all": "tslint -c tslint.json -p tsconfig.json && npm run lint --prefix src-client"
   },
   "author": "deskoh",
   "license": "ISC",
