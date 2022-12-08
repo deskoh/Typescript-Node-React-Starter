@@ -15,7 +15,7 @@
   "author": "deskoh",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "express-session": "^1.15.6",
     "typescript": "^3.2.2"
   },
